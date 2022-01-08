@@ -13,9 +13,18 @@ namespace Abar.Controllers
             _logger = logger;
         }
 
+        public IActionResult Perfil()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
+        }
+        public IActionResult Login()
+        {
+            return View();        
         }
 
         public IActionResult Privacy()
