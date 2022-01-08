@@ -1,11 +1,10 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Cadastra-se | Abar"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
-
+<!------
 <div class="row">
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
@@ -31,12 +30,12 @@
         </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
-        <section>
+        <section>  
             <h3>Use another service to register.</h3>
-            <hr />
-            @{
+            <hr/>
+                    aqui uma chave de abertura e um arroba
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
+                { 
                     <div>
                         <p>
                             There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
@@ -54,13 +53,66 @@
                                     <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
                                 }
                             </p>
-                        </div>
+                        </div> 
                     </form>
-                }
-            }
+                } ---> <!---
+            aqui tem um bigode de fechamento uma chave de fechamento
         </section>
+    </div> -->
+ <haead>
+    <link href="~/css/style_registrar.css" rel="stylesheet" />
+</haead>
+<h1>@ViewData["Title"]</h1>
+
+
+<div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pl-3">
+          <img src="~/images_register/register.svg" alt="Image class="  class="img-fluid mt-3 pl-3">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Cadastra-se</h3>
+              <p class="mb-4"></p>
+            </div>
+                    
+           <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group ">  
+                 <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" type="email" autocomplete="username" aria-required="true" placeholder="Digite seu Email"/>
+               
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group ">
+                <label asp-for="Input.Password">Senha</label>
+                <input asp-for="Input.Password" class="form-control" type="password" autocomplete="new-password" aria-required="true"  placeholder="Digite sua Senha"/>
+                
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group ">
+               <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" type="password" autocomplete="new-password" aria-required="true" placeholder="Confirme sua Senha"/>
+               
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Confirmar</button>
+        </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
     </div>
-</div>
+  </div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
