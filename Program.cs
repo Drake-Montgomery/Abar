@@ -1,11 +1,16 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Abar.Areas.Identity.Data;
+using Abar.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("Context_LoginConnection");
 
 builder.Services.AddDbContext<Context_Login>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<Context_Pessoa>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<Usuario_Abar>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<Context_Login>();
