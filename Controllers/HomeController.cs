@@ -17,7 +17,10 @@ namespace Abar.Controllers
         {
             return View();
         }
-
+        public IActionResult Feed()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();
