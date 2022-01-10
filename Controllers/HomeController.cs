@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Abar.Controllers
+namespace AbarMvc.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,7 +17,26 @@ namespace Abar.Controllers
         {
             return View();
         }
-
+        public IActionResult Registrar() 
+        {
+            return View();
+        }
+        public IActionResult Conta_feed()
+        {
+            return View();
+        }
+        public IActionResult Perfil_feed()
+        {
+            return View();
+        }
+        public IActionResult Feed()
+        {
+            return View();
+        }
+        public IActionResult Seguranca_feed()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
