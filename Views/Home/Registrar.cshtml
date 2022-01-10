@@ -1,0 +1,64 @@
+﻿ <head>
+    <!-- Style -->
+    <link rel="stylesheet" href="~/css/style_register.css">
+    <title> Abar | Registrar-Se</title>
+  </head> 
+<div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pl-3 p-3">
+          <img src="~/images_register/social.svg" alt="Image class="  class="img-fluid mt-3 pl-3">
+        </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Cadastra-se</h3>
+              <p class="mb-4"></p>
+            </div>
+                    
+            <form action="#" method="post">
+             
+              <label for="">Email</label>
+              <div class="form-group first">
+                <label for="username">Digite seu Email</label>
+                <input type="text" class="form-control" id="username">
+              </div>
+            
+
+
+              <label for="">Senha</label>
+              <div class="form-group first">
+                <label for="password">Digite sua Senha</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+
+              <label for="">Confirme</label>
+              <div class="form-group last mb-4">
+                <label for="password">Confirme sua Senha</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <label class="control control--checkbox mb-0"><span class="caption">Lembrar Senha</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label>    
+                </label> 
+                
+              </div>
+             
+              <!-- 
+              <input type="submit" value="Confimar cadastro" class="btn btn-block btn-primary" >
+              --->
+              <a asp-action="Feed"  asp-controller="Home" style="text-decoration: none; font-size: large; color: aliceblue; text-align: center;" class="btn btn-block btn-primary">Confirmar Cadastro</a>
+             
+            </form>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
