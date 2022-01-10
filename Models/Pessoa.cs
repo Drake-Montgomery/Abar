@@ -5,7 +5,7 @@ namespace Abar.Models
 {
     public class Pessoa
     {
-        [DataType(DataType.)]
+        [DataType(DataType.Text)]
         public string ? Nome { get; set; }
         public string ? Sobrenome { get; set; }
         [Key]
